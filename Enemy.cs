@@ -6,10 +6,13 @@ namespace Exercicio3
         private float health;
         private float shield;
 
+        private const float MaxHealth = 100;
+        private const float MaxShield = 100;
+
         public Enemy(string name)
         {
             SetName(name);
-            health = 100;
+            health = MaxHealth;
             shield = 0;
         }
 
@@ -50,12 +53,12 @@ namespace Exercicio3
             if (powerUp == PowerUp.Health)
             {
                 health += gain;
-                if (health > 100) health = 100;
+                if (health > MaxHealth) health = MaxHealth;
             }
             else if (powerUp == PowerUp.Shield)
             {
                 shield += gain;
-                if (shield > 100) shield = 100;
+                if (shield > MaxShield) shield = MaxShield;
             }
         }
     }
