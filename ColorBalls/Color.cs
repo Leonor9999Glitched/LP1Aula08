@@ -2,7 +2,10 @@ namespace ColorBalls
 {
     public class Color
     {
-        private byte red, green, blue, alpha;
+        private byte Red { get; set; }
+        private byte Green; 
+        private byte Blue;
+        private byte Alpha;
 
         public Color(byte red, byte green, byte blue, byte alpha)
         {
@@ -20,30 +23,11 @@ namespace ColorBalls
             alpha = 255;
         }
 
-        public byte GetRed() => red;
-        public byte GetGreen() => green;
-        public byte GetBlue() => blue;
-        public byte GetAlpha() => alpha;
+        
         public byte GetGreyscale()
         {
             return (byte)((red + green + blue) / 3);
         }
-
-        public void SetRed(byte red)
-        {
-            this.red = red;
-        }
-        public void SetGreen(byte Green)
-        {
-            this.green = green;
-        }
-        public void SetBlue(byte blue)
-        {
-            this.blue = blue;
-        }
-        public void SetAlpha(byte alpha)
-        {
-            this.alpha = alpha;
-        }
     }
+
 }
